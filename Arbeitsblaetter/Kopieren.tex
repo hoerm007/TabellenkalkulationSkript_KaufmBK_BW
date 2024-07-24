@@ -1,0 +1,34 @@
+% !TeX root = ../Skript_Tabellen.tex
+\subsection{Kopieren von Formeln}
+\begin{minipage}{\textwidth}
+    \adjustbox{valign=t, padding=0ex 0ex 2ex 0ex}{\begin{minipage}{.5\textwidth-2ex}
+            \Calc lässt sich als Taschenrechner verwenden. Beispielsweise will ein Vermieter die Gesamtmiete aus Miete und Nebenkosten für verschiedene Wohnungen bestimmen. Die Werte für die Miete und Nebenkosten hat er bereits erfasst. Eine Möglichkeit wäre die Werte händisch zu berechnen, z.B. in \zelle{D2} folgendes einzugeben: \lstinline|=970+160|
+    \end{minipage}}%
+    \adjustbox{valign=t, padding=2ex 0ex 0ex 0ex}{\begin{minipage}{.5\textwidth-2ex}
+            \includegraphics*[width=\textwidth]{\pics/Adressierung1.png}
+    \end{minipage}}%
+\end{minipage}
+
+\medskip
+
+Ändern sich nun die Nebenkosten, so muss der Vermieter an Zwei Stellen Anpassungen vornehmen. Er muss den Wert in \zelle{C2} und in \zelle{D2} ändern. Dies ist mühsam und fehleranfällig. Daher gibt man \Calc nicht die Anweisung 970+160 zu berechnen, sondern die Inhalte der Zellen \zell{B2} und \zell{C2} zu addieren: \lstinline|=B2+C2|
+
+Man kann die Eingabe händisch per Tastatur machen oder die Maus zu Hilfe nehmen, indem man in \zelle{D2} ein Gleichzeichen eingibt, dann \zelle{B2} anklickt, ein Pluszeichen eingibt, auf \zelle{C2} klickt und dann Enter drückt.
+
+Ändert der Vermieter dann den Wert der Nebenkosten (oder der Miete), so passt \Calc automatisch auch den Wert der Gesamtmiete an.
+\begin{tcolorbox}[title=Adressierung]
+    Die Werte, die in Zellen stehen, können in anderen Zellen verwendet werden, indem man die Adresse der Zelle angibt, z.B. \lstinline|=A5+C3| berechnet die Summe der Werte aus den Zellen \zell{A5} und \zell{C3}.
+\end{tcolorbox}
+
+\begin{Exercise}[title={Öffnen Sie die Datei \href{file:./Uebungsblaetter/Adressierung.ods}{Adressierung.ods}}, label=Kopieren]
+    \begin{enumerate}
+        \item Berechnen Sie auf dem Blatt \textit{Miete} jeweils die Gesamtmiete.
+        \item Berechnen Sie auf dem Blatt \textit{Einkaufsliste} jeweils die Kosten der einzelnen Zutaten und dann die Gesamtkosten.
+
+        Ändern Sie den Preis und/oder die Anzahl einzelner Zutaten und beobachten Sie, wie sich die Kosten/Gesamtkosten ändern.
+        \item Berechnen Sie auf dem Blatt \textit{Noten} jeweils Schnitt, den die Schüler erreicht haben. (Hinweis: Den Schnitt berechnet man, indem man die Noten der Klassenarbeiten addiert und dann durch die Gesamtzahl der Klassenarbeiten, also 2, teilt.)
+    \end{enumerate}
+\end{Exercise}
+\begin{Answer}[ref=Kopieren]
+    Die Lösungen sind in der Datei \href{file:./Uebungsblaetter/AdressierungLoesung.ods}{AdressierungLoesung.ods} zu finden.
+\end{Answer}
